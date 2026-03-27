@@ -1,0 +1,39 @@
+template:
+  name: test
+  identifier: test
+  projectIdentifier: Testim
+  orgIdentifier: default
+  versionLabel: "1"
+  type: Workspace
+  tags: {}
+  spec:
+    provider:
+      type: others
+      title: thirdPartyGitProvider
+      info: thirdPartyGitProviderInfo
+      icon: service-github
+      size: 20
+      disabled: false
+    tags: []
+    cost_estimation:
+      enabled: false
+      locked: false
+    default_pipelines:
+      plan: ""
+      apply: ""
+      destroy: ""
+      drift: ""
+      locked: true
+    provisioner:
+      type: opentofu
+      version: 1.11.2
+      locked: true
+    repository:
+      isHarnessCode: false
+      connector: crystaliacm
+      name: iacm_repo
+      branch: main
+      gitFetchType: branch
+      locked: true
+    variables: []
+    terraform_variables: []
